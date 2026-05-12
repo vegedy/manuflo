@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manu & Flo heiraten bei McDonald's</title>
+  <meta name="description" content="Romantische Hochzeitsseite - mit McDonald's, McFlurry und goldenen Bögen statt Gamsalm." />
+  <meta property="og:title" content="Manu & Flo heiraten bei McDonald's" />
+  <meta property="og:description" content="Romantische Hochzeitsseite - mit McDonald's, McFlurry und goldenen Bögen statt Gamsalm." />
+  <meta property="og:image" content="https://picsum.photos/seed/mcweddinghero/1600/1000" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root, [data-theme="light"] {
+      --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+      --text-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
+      --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+      --text-lg: clamp(1.125rem, 1rem + 0.75vw, 1.5rem);
+      --text-xl: clamp(1.5rem, 1.2rem + 1.25vw, 2.25rem);
+      --text-2xl: clamp(2rem, 1.2rem + 2.5vw, 3.5rem);
+      --text-hero: clamp(3rem, 0.5rem + 7vw, 6.5rem);
+      --space-1: 0.25rem;
+      --space-2: 0.5rem;
+      --space-3: 0.75rem;
+      --space-4: 1rem;
+      --space-5: 1.25rem;
+      --space-6: 1.5rem;
+      --space-8: 2rem;
+      --space-10: 2.5rem;
+      --space-12: 3rem;
+      --space-16: 4rem;
+      --space-20: 5rem;
+      --space-24: 6rem;
+      --color-bg: #fbf7ef;
+      --color-surface: #fffdf8;
+      --color-surface-2: #fff7e8;
+      --color-surface-offset: #f3ead4;
+      --color-divider: #e9d6a5;
+      --color-border: rgba(85, 47, 11, 0.16);
+      --color-text: #42240b;
+      --color-text-muted: #7e5c3b;
+      --color-text-faint: #b08760;
+      --color-text-inverse: #fff8ed;
+      --color-primary: #b11226;
+      --color-primary-hover: #941020;
+      --color-primary-highlight: #ffe0b2;
+      --color-gold: #d49b00;
+      --color-gold-soft: #f6d36b;
+      --radius-sm: 0.375rem;
+      --radius-md: 0.625rem;
+      --radius-lg: 1rem;
+      --radius-xl: 1.5rem;
+      --radius-full: 9999px;
+      --shadow-sm: 0 2px 8px rgba(66, 36, 11, 0.08);
+      --shadow-md: 0 12px 30px rgba(66, 36, 11, 0.12);
+      --shadow-lg: 0 24px 60px rgba(66, 36, 11, 0.18);
+      --transition-interactive: 180ms cubic-bezier(0.16, 1, 0.3, 1);
+      --font-display: 'Allura', cursive;
+      --font-body: 'Work Sans', sans-serif;
+      --content-default: 1120px;
+      --content-narrow: 720px;
+    }
+
+    [data-theme="dark"] {
+      --color-bg: #19120d;
+      --color-surface: #211711;
+      --color-surface-2: #2a1d15;
+      --color-surface-offset: #302115;
+      --color-divider: #493018;
+      --color-border: rgba(255, 221, 160, 0.15);
+      --color-text: #f8ead5;
+      --color-text-muted: #d2b893;
+      --color-text-faint: #a78961;
+      --color-text-inverse: #2a1d15;
+      --color-primary: #ff4c4c;
+      --color-primary-hover: #ff6a5b;
+      --color-primary-highlight: #3d2518;
+      --color-gold: #f7c948;
+      --color-gold-soft: #f4d77b;
+      --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.25);
+      --shadow-md: 0 18px 36px rgba(0, 0, 0, 0.35);
+      --shadow-lg: 0 32px 72px rgba(0, 0, 0, 0.5);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-height: 100dvh;
+      font-family: var(--font-body);
+      font-size: var(--text-base);
+      line-height: 1.65;
+      color: var(--color-text);
+      background: var(--color-bg);
+    }
+    img { display: block; width: 100%; max-width: 100%; height: auto; }
+    a, button { transition: all var(--transition-interactive); }
+    a { color: inherit; }
+    button { font: inherit; cursor: pointer; }
+    .skip-link {
+      position: absolute; left: 1rem; top: -3rem; background: var(--color-primary);
+      color: white; padding: 0.75rem 1rem; z-index: 100; border-radius: 999px;
+    }
+    .skip-link:focus { top: 1rem; }
+    .container { width: min(calc(100% - 2rem), var(--content-default)); margin-inline: auto; }
+
+    .site-header {
+      position: absolute;
+      inset: 0 0 auto 0;
+      z-index: 20;
+      padding: var(--space-4) 0;
+    }
+    .header-inner {
+      display: flex; align-items: center; justify-content: space-between; gap: var(--space-6);
+      width: min(calc(100% - 2rem), 1320px); margin-inline: auto;
+    }
+    .brand {
+      display: inline-flex; align-items: center; gap: var(--space-3); text-decoration: none; color: white;
+    }
+    .brand-mark { width: 34px; height: 34px; color: var(--color-gold-soft); flex: none; }
+    .brand-name {
+      font-family: var(--font-display); font-size: clamp(1.75rem, 1.2rem + 2vw, 2.5rem); line-height: 1;
+      letter-spacing: 0.01em;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.35);
+    }
+    .main-nav { display: flex; align-items: center; gap: var(--space-6); }
+    .main-nav a, .theme-toggle {
+      color: white; text-decoration: none; font-size: var(--text-sm); border: 0;
+      background: transparent; min-height: 44px; display: inline-flex; align-items: center;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.35);
+    }
+    .theme-toggle {
+      width: 44px; justify-content: center; border-radius: var(--radius-full);
+      border: 1px solid rgba(255,255,255,0.35); backdrop-filter: blur(10px);
+    }
+    .theme-toggle:hover, .main-nav a:hover { opacity: 0.85; }
+
+    .hero {
+      position: relative;
+      min-height: 88svh;
+      display: grid;
+      place-items: center;
+      overflow: clip;
+      background:
+        linear-gradient(to bottom, rgba(35,18,8,0.18), rgba(35,18,8,0.55)),
+        url('./images/mcdonalds-flo-manu.png') center/cover no-repeat;
+    }
+    .hero::after {
+      content: '';
+      position: absolute; inset: auto 0 0 0; height: 22%;
+      background: linear-gradient(to top, rgba(25,18,13,0.28), transparent);
+      pointer-events: none;
+    }
+    .hero-content {
+      position: relative; z-index: 2; text-align: center; color: white;
+      padding: min(18vh, 8rem) 1rem 4rem;
+    }
+    .hero h1 {
+      margin: 0; font-family: var(--font-display); font-size: var(--text-hero); line-height: 0.9;
+      font-weight: 400; text-shadow: 0 4px 20px rgba(0,0,0,0.35);
+    }
+    .hero-date {
+      margin-top: var(--space-5); font-size: clamp(1.1rem, 0.95rem + 0.6vw, 1.45rem);
+      font-weight: 400; text-shadow: 0 2px 10px rgba(0,0,0,0.35);
+    }
+    .hero-pill {
+      display: inline-flex; margin-top: var(--space-6); align-items: center; gap: var(--space-2);
+      background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.28); color: white;
+      padding: 0.7rem 1rem; border-radius: var(--radius-full); backdrop-filter: blur(8px);
+      font-size: var(--text-sm);
+    }
+
+    main section { padding-block: clamp(var(--space-12), 8vw, var(--space-24)); }
+    .intro {
+      background: linear-gradient(to bottom, var(--color-bg), var(--color-surface));
+      text-align: center;
+    }
+    .section-kicker {
+      margin: 0 auto var(--space-6);
+      font-family: var(--font-display); color: #b37ab9; font-size: clamp(2.5rem, 1.7rem + 3vw, 4.5rem);
+      line-height: 1;
+      max-width: 16ch;
+    }
+    .card-grid {
+      display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: var(--space-4); align-items: start;
+      margin-top: var(--space-8);
+    }
+    .feature {
+      text-align: center;
+    }
+    .feature-image {
+      aspect-ratio: 0.72 / 1; overflow: hidden; border-radius: 0; box-shadow: var(--shadow-sm);
+      background: var(--color-surface-offset);
+    }
+    .feature h3 {
+      margin: var(--space-4) 0 var(--space-2); font-family: var(--font-display); font-weight: 400;
+      font-size: clamp(2rem, 1.2rem + 1.6vw, 3rem); color: #b37ab9; line-height: 1;
+    }
+    .feature p {
+      margin: 0 auto; font-size: var(--text-sm); color: var(--color-text-muted); max-width: 26ch;
+    }
+    .feature a { color: inherit; text-decoration-thickness: 1px; }
+
+    .details {
+      background: var(--color-surface-2);
+      border-top: 1px solid var(--color-divider);
+      border-bottom: 1px solid var(--color-divider);
+    }
+    .details-wrap {
+      display: grid; grid-template-columns: 1.1fr 1fr; gap: var(--space-12); align-items: start;
+    }
+    .details-title {
+      margin: 0 0 var(--space-4); font-family: var(--font-display); font-size: clamp(2.8rem, 2rem + 2vw, 4.5rem);
+      font-weight: 400; line-height: 1; color: var(--color-primary);
+    }
+    .details-copy p { margin: 0 0 var(--space-4); color: var(--color-text-muted); }
+    .note-card {
+      background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-xl);
+      padding: var(--space-8); box-shadow: var(--shadow-md);
+    }
+    .note-card h3 {
+      margin: 0 0 var(--space-4); font-size: var(--text-lg); color: var(--color-text);
+    }
+    .note-card ul { margin: 0; padding-left: 1.2rem; color: var(--color-text-muted); }
+    .note-card li + li { margin-top: var(--space-2); }
+
+    .schedule .section-kicker { color: var(--color-primary); }
+    .timeline {
+      display: grid; gap: var(--space-4); max-width: 900px; margin: 0 auto;
+    }
+    .timeline-item {
+      display: grid; grid-template-columns: 120px 1fr; gap: var(--space-4); align-items: start;
+      padding: var(--space-5); border-top: 1px solid var(--color-divider);
+    }
+    .timeline-item:last-child { border-bottom: 1px solid var(--color-divider); }
+    .time {
+      font-size: var(--text-sm); font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--color-primary);
+    }
+    .timeline-item h3 { margin: 0 0 0.35rem; font-size: var(--text-lg); }
+    .timeline-item p { margin: 0; color: var(--color-text-muted); }
+
+    .rsvp {
+      background: linear-gradient(180deg, var(--color-surface), var(--color-bg));
+    }
+    .rsvp-box {
+      background: color-mix(in srgb, var(--color-gold-soft) 25%, var(--color-surface));
+      border: 1px solid var(--color-border); border-radius: var(--radius-xl); padding: clamp(var(--space-6), 4vw, var(--space-12));
+      box-shadow: var(--shadow-md); max-width: 860px; margin: 0 auto;
+    }
+    .rsvp-box p { color: var(--color-text-muted); }
+    .fun-list {
+      display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: var(--space-4) var(--space-8); margin-top: var(--space-6);
+    }
+    .fun-list div {
+      padding-bottom: var(--space-3); border-bottom: 1px dashed rgba(66,36,11,0.18);
+    }
+    .label { display: block; font-size: var(--text-xs); text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-text-faint); }
+    .value { display: block; margin-top: 0.2rem; font-weight: 600; }
+
+    .footer {
+      padding: var(--space-10) 1rem var(--space-12);
+      text-align: center; color: var(--color-text-muted); font-size: var(--text-sm);
+    }
+    .footer strong { color: var(--color-text); }
+
+    .sticker {
+      display: inline-flex; align-items: center; gap: var(--space-2); font-size: var(--text-xs);
+      padding: 0.5rem 0.75rem; border-radius: var(--radius-full); background: var(--color-primary-highlight);
+      color: var(--color-text); margin-bottom: var(--space-4);
+    }
+
+    @media (max-width: 900px) {
+      .main-nav { gap: var(--space-3); flex-wrap: wrap; justify-content: flex-end; }
+      .details-wrap, .card-grid, .fun-list { grid-template-columns: 1fr; }
+      .timeline-item { grid-template-columns: 1fr; }
+      .hero { min-height: 78svh; }
+    }
+
+    @media (max-width: 640px) {
+      .site-header { padding-top: 0.5rem; }
+      .header-inner {
+        align-items: flex-start; flex-direction: column; gap: var(--space-3);
+      }
+      .main-nav {
+        width: 100%; justify-content: space-between; gap: var(--space-2);
+      }
+      .main-nav a { font-size: 0.82rem; }
+      .hero-content { padding-top: 10rem; }
+      .section-kicker { max-width: 10ch; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      * { transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Direkt zum Inhalt</a>
+
+  <header class="site-header" aria-label="Kopfbereich">
+    <div class="header-inner">
+      <a class="brand" href="#top" aria-label="Zur Startseite">
+        <svg class="brand-mark" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M8 47C8 31 14 17 22 17C28 17 31 25 32 29C33 25 36 17 42 17C50 17 56 31 56 47" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M21 47V28M43 47V28" stroke="currentColor" stroke-width="6" stroke-linecap="round"/>
+        </svg>
+        <span class="brand-name">manu & flo heiraten</span>
+      </a>
+      <nav class="main-nav" aria-label="Hauptnavigation">
+        <a href="#ueberblick">Überblick</a>
+        <a href="#feier">Die Feier</a>
+        <a href="#filiale">Filiale</a>
+        <a href="#aktivitaeten">Aktivitäten</a>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Farbschema umschalten">☾</button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-label="Einleitung">
+      <div class="hero-content container">
+        <h1>manu & flo heiraten</h1>
+        <p class="hero-date">15. August 2026 · McDonald's · Ehrwald Drive-In Deluxe</p>
+        <div class="hero-pill">Black Tie optional · McFlurry verpflichtend</div>
+      </div>
+    </section>
+
+    <section class="intro" id="ueberblick">
+      <div class="container">
+        <h2 class="section-kicker">sei dabei, wenn manu & flo ihre hochzeit bei mcces feiern</h2>
+        <div class="card-grid">
+          <article class="feature">
+            <div class="feature-image">
+              <img src="./images/premium-lounge.png" alt="Placeholder-Bild einer stilisierten Fast-Food-Hochzeitsdeko" width="720" height="980" loading="lazy" decoding="async">
+            </div>
+            <h3>filiale</h3>
+            <p>Wir feiern unseren großen Tag in der Premium-Lounge zwischen <a href="#feier">Bestellterminal</a> und Getränkestation. Dresscode: festlich mit leichter Frittiernote.</p>
+          </article>
+          <article class="feature" id="filiale">
+            <div class="feature-image">
+              <img src="./images/gruppenhaus.png" alt="Placeholder-Bild eines kleinen Hauses als scherzhafte Anspielung auf das Gruppenhaus" width="720" height="980" loading="lazy" decoding="async">
+            </div>
+            <h3>gruppenbox</h3>
+            <p>Viele von uns wohnen eine Woche lang in der romantischen <a href="#rsvp">Happy-Family-Box</a> direkt neben dem Parkplatz. Late Check-out nur nach Absprache mit Ronald.</p>
+          </article>
+          <article class="feature" id="aktivitaeten">
+            <div class="feature-image">
+              <img src="./images/nugget-tasting.png" alt="Placeholder-Bild für gemeinsame Aktivitäten" width="720" height="980" loading="lazy" decoding="async">
+            </div>
+            <h3>aktivitäten</h3>
+            <p>Damit euch nicht langweilig wird, haben wir einige Vorschläge vorbereitet: Nugget-Tasting, Drive-In-Slalom und das traditionelle <a href="#schedule">Burgerwerfen</a>.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="details" id="feier">
+      <div class="container details-wrap">
+        <div class="details-copy">
+          <span class="sticker">weitere informationen</span>
+          <h2 class="details-title">die feier</h2>
+          <p>Unsere freie Trauung startet um 15:00 Uhr unter den goldenen Bögen. Sollte es regnen, wechseln wir elegant in den Innenbereich zwischen Apfeltasche und McCafé. Taschentücher werden am Ketchup-Spender bereitgestellt.</p>
+          <p>Im Anschluss gibt es einen Sektempfang mit Sprite Zero, gefolgt von einem festlichen Drei-Gänge-Menü: kleine Pommes, große Pommes und ein überraschend emotionaler Sharing-Eimer Nuggets.</p>
+          <p>Für alle, die uns auch standesamtlich begleiten möchten: Wir sagen bereits am Freitag im Beisein eines leicht überforderten Filialleiters offiziell Ja. Treffpunkt ist vor dem Self-Order-Terminal links neben der Rutsche.</p>
+        </div>
+        <aside class="note-card" aria-label="Hinweise für Gäste">
+          <h3>Wichtige Hinweise</h3>
+          <ul>
+            <li>Frisuren bitte sturmsicher, da die McDrive-Tür regelmäßig automatisch öffnet.</li>
+            <li>Shuttle-Service fährt im 20-Minuten-Takt zwischen Gruppenbox und Pommesaltar.</li>
+            <li>Kinderbetreuung im Bällebad, Erwachsene bitte nur mit ausdrücklicher Genehmigung hinein.</li>
+            <li>Wer vegan isst, bekommt zwei Gurkenscheiben extra und unsere ewige Bewunderung.</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="schedule" id="schedule">
+      <div class="container">
+        <h2 class="section-kicker">ablauf des knusprigen tages</h2>
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="time">13:30</div>
+            <div>
+              <h3>Ankunft & erster Milchshake</h3>
+              <p>Bitte erscheint pünktlich, damit wir genug Zeit für Umarmungen, Pommesfotos und die erste Lage Servietten haben.</p>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <div class="time">15:00</div>
+            <div>
+              <h3>Freie Trauung am McDrive</h3>
+              <p>Gelübde, Ringtausch und symbolische Übergabe einer gemeinsamen Bonus-App. Hupen gilt als Applaus.</p>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <div class="time">17:00</div>
+            <div>
+              <h3>Fotosession bei den Saucen</h3>
+              <p>Goldene Stunde trifft goldene Bögen. Gruppenfotos nach Soßen-Präferenz sortiert.</p>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <div class="time">19:30</div>
+            <div>
+              <h3>Menü, Reden & McFlurry-Walzer</h3>
+              <p>Die Rede des Trauzeugen wird von einer Eismaschine unterbrochen, die überraschend heute tatsächlich funktioniert.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="rsvp" id="rsvp">
+      <div class="container">
+        <div class="rsvp-box">
+          <span class="sticker">rückinformationen von euch</span>
+          <h2 class="details-title" style="margin-bottom:1rem;">bitte gebt uns bescheid</h2>
+          <p>Damit wir gut planen können, sagt uns bitte bis zum 15. Juli 2026, ob ihr dabei seid, ob ihr im Bällebad übernachten möchtet und welches Menü eure Persönlichkeit am besten beschreibt.</p>
+          <div class="fun-list" role="list">
+            <div role="listitem"><span class="label">Anwesenheit</span><span class="value">Ja / Vielleicht / Nur zum Dessert</span></div>
+            <div role="listitem"><span class="label">Menüwahl</span><span class="value">Classic, Royal TS oder rein spirituell</span></div>
+            <div role="listitem"><span class="label">Shuttlebedarf</span><span class="value">McShuttle, zu Fuß oder per Einkaufswagen</span></div>
+            <div role="listitem"><span class="label">Songwunsch</span><span class="value">Alles außer dem Geräusch der Fritteuse</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p><strong>Wichtiger Hinweis:</strong> Eine andere Seite versucht
+    Fehlinformationen über unsere Hochzeit zu verbreiten: <a
+	    href="https://manu-und-flo-heiraten.de">manu-und-flo-heiraten.de</a>.</p>
+  </footer>
+
+  <script>
+    (function () {
+      const toggle = document.querySelector('[data-theme-toggle]');
+      const root = document.documentElement;
+      let theme = 'light' //window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      root.setAttribute('data-theme', theme);
+
+      const renderIcon = () => {
+        toggle.textContent = theme === 'dark' ? '☀' : '☾';
+        toggle.setAttribute('aria-label', theme === 'dark' ? 'Zu hellem Modus wechseln' : 'Zu dunklem Modus wechseln');
+      };
+
+      renderIcon();
+      toggle.addEventListener('click', () => {
+        theme = theme === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', theme);
+        renderIcon();
+      });
+    }());
+  </script>
+</body>
+</html>
